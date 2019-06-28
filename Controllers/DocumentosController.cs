@@ -23,7 +23,12 @@ namespace wssModValoresLibres.Controllers
             if(await _repo.GetDocumento(docForSearch.Empresa, docForSearch.TipoDocumnento, docForSearch.Folio))
                 return Ok(1);
 
-            return NotFound();
+            return Ok(0);
+        }
+
+        [HttpPut("modvalslibres")]
+        public async Task<Task> ModificaValoresLibres(DTOs.DocForModify docForModify){
+            
         }
     }
 }
